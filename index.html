@@ -30,9 +30,47 @@
         <![endif]-->
 
         <div role="document">
-            <header role="banner"></header>
-            <nav role="navigation"></nav>
-            <main role="main"></main>
+            <header role="banner">
+                <img src="img/OW_logo.png" alt="logo" />
+
+                <button id="nav-toggle">Menu &#9776;</button>
+                <nav role="navigation">
+                    <form name="search">
+                        <input type="search" placeholder="Search products" name="search" />
+                        <button type="submit">Go</button>
+                    </form>
+
+                    <ul id="nav-site">
+                        <li>Home</li>
+                        <li>Login</li>
+                        <li>Retail Locator</li>
+                        <li>Dealer Area</li>
+                    </ul>
+
+                    <hr>
+
+                    <ul id="nav-content">
+                        <li>Products</li>
+                        <li>Inspired Design</li>
+                        <li>Get Connected</li>
+                        <li>Our Story</li>
+                        <li>Catalog</li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main role="main">
+                <figure>
+                    <img srcset="img/big-1500.jpg 960w,
+                                 img/big-640.jpg 640w,
+                                 img/big-320.jpg 320w"
+                         src="img/big-1500.jpg"
+                         alt="A rad wolf" />
+                    <button id="main-img-prev">&#10094;</button>
+                    <button id="main-img-next">&#10095;</button>
+                </figure>
+            </main>
+
             <aside role="complementary"></aside>
             <footer role="contentinfo"></footer>
         </div>
