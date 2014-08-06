@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Andrew Nelson -- Front end code + design -- @werdnanoslen
+    Brooks Gallman -- Server-side
+
+# THANKS
+
+    Coffee <3
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, Cardinal
+    CSS3, LESS, normalize.css
+    jQuery, Modernizr
