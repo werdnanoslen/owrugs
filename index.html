@@ -47,7 +47,7 @@
                         <li>Dealer Area</li>
                     </ul>
 
-                    <hr>
+                    <!-- <hr> -->
 
                     <ul id="nav-content">
                         <li>Products</li>
@@ -61,13 +61,16 @@
 
             <main role="main">
                 <figure>
-                    <img srcset="img/big-1500.jpg 960w,
-                                 img/big-640.jpg 640w,
-                                 img/big-320.jpg 320w"
-                         src="img/big-1500.jpg"
-                         alt="A rad wolf" />
-                    <button id="main-img-prev">&#10094;</button>
-                    <button id="main-img-next">&#10095;</button>
+                    <picture alt="carpet name">
+                        <source src="img/big-320.jpg">
+                        <source src="img/big-640.jpg" media="(min-width:440px)">
+                        <source src="img/big-1500.jpg" media="(min-width:600px)">
+                        <noscript>
+                            <img src="img/big-1500.jpg" alt="carpet name">
+                        </noscript>
+                    </picture>
+                    <button id="main-img-prev" value="previous">&lsaquo;</button>
+                    <button id="main-img-next" value="next">&rsaquo;</button>
                 </figure>
             </main>
 
