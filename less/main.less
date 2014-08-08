@@ -4,9 +4,55 @@
    Main ($main)
 \* ================================================================== */
 
-/**
- * YOUR MAGICAL CSS GOES HERE!
- */
-picture img {
-    width: 100%;
+body {
+    position: relative;
+}
+
+header > * {
+    margin: 10px 0;
+}
+header .grid-item:last-of-type {
+    text-align: right;
+}
+
+/* Main-nav */
+nav#main-nav {
+    background-color: @white;
+    display: none;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+}
+nav#main-nav input[name=search],
+nav#main-nav button[type=submit] {
+    display: inline-block;
+    margin: 0;
+}
+nav#main-nav input[name=search] {
+    width: 80%;
+}
+nav#main-nav button[type=submit] {
+    margin-left: -3px;
+    width: 20%;
+}
+nav#main-nav ul li {
+    background-color: @list-item-light;
+    margin-bottom: 4px;
+}
+nav#main-nav ul li:hover,
+nav#main-nav ul li:active {
+    background-color: @list-item-dark;
+}
+nav#main-nav ul li:last-child {
+    margin-bottom: 0;
+}
+nav#main-nav ul li a {
+    color: inherit;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav#main-nav #nav-site {
+    font-weight: bold;
 }

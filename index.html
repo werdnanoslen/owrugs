@@ -24,87 +24,91 @@
         <script src="js/vendor/modernizr-2.8.1.min.js"></script>
     </head>
 
-    <body>
+    <body class="wrapper">
         <!--[if lt IE 8]>
             <p class="browsehappy">It looks like you are using an outdated browser. Please <a href="http://whatbrowser.org">consider upgrading</a> for a faster, better, and safer web experience.</p>
         <![endif]-->
 
-        <div role="document">
-            <header role="banner">
-                <img src="img/OW_logo.png" alt="logo" />
+        <header role="banner" class="grid">
+            <div class="grid-item one-half">
+                <a href="/">
+                    <img id="logo" src="img/OW_logo.png" alt="logo" />
+                </a>
+            </div>
+            <div class="grid-item one-half">
+                <button id="nav-toggle" class="button button-primary button-small">Menu &#9776;</button>
+            </div>
+        </header>
 
-                <button id="nav-toggle">Menu &#9776;</button>
-                <nav role="navigation">
-                    <form name="search">
-                        <input type="search" placeholder="Search products" name="search" />
-                        <button type="submit">Go</button>
-                    </form>
+        <nav id="main-nav" role="navigation">
+            <form name="search">
+                <input type="search" placeholder="Search products" name="search" />
+                <button class="button button-primary" type="submit">Go</button>
+            </form>
 
-                    <ul id="nav-site">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Retail Locator</a></li>
-                        <li><a href="#">Dealer Area</a></li>
-                    </ul>
+            <ul id="nav-site">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Retail Locator</a></li>
+                <li><a href="#">Dealer Area</a></li>
+            </ul>
 
-                    <hr>
+            <hr>
 
-                    <ul id="nav-content">
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Inspired Design</a></li>
-                        <li><a href="#">Get Connected</a></li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Catalog</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <ul id="nav-content">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Inspired Design</a></li>
+                <li><a href="#">Get Connected</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Catalog</a></li>
+            </ul>
+        </nav>
 
-            <main role="main">
-                <figure>
-                    <picture alt="carpet name">
-                        <source src="img/big-320.jpg">
-                        <source src="img/big-640.jpg" media="(min-width:440px)">
-                        <source src="img/big-1500.jpg" media="(min-width:600px)">
-                        <noscript>
-                            <img src="img/big-1500.png" alt="carpet name">
-                        </noscript>
-                    </picture>
-                    <button id="main-img-prev" value="previous">&lsaquo;</button>
-                    <button id="main-img-next" value="next">&rsaquo;</button>
-                </figure>
-            </main>
+        <main role="main">
+            <figure>
+                <picture alt="carpet name">
+                    <source src="img/big-320.jpg">
+                    <source src="img/big-640.jpg" media="(min-width:440px)">
+                    <source src="img/big-1500.jpg" media="(min-width:600px)">
+                    <noscript>
+                        <img src="img/big-1500.png" alt="carpet name">
+                    </noscript>
+                </picture>
+                <button id="main-img-prev" value="previous">&lsaquo;</button>
+                <button id="main-img-next" value="next">&rsaquo;</button>
+            </figure>
+        </main>
 
-            <footer role="contentinfo">
-                <ul class="accordion">
-                    <li>Products</li>
-                    <li><a href="#">Area Rugs</a></li>
-                    <li><a href="#">Custom Sized Rugs</a></li>
-                    <li><a href="#">Rug Pads</a></li>
-                    <li><a href="#">OW Hospitality</a></li>
-                    <li><a href="#">Wall-to-Wall Carpet</a></li>
-                    <li><a href="#">Beauty Inside &amp; Out</a></li>
-                    <li><a href="#">Made in the USA</a></li>
-                </ul>
-                <ul class="accordion">
-                    <li>Inspired Design</li>
-                    <li><a href="#">Today's Trends</a></li>
-                    <li><a href="#">Lifestyle Gallery</a></li>
-                    <li><a href="#">Choosing the Right Size</a></li>
-                    <li><a href="#">Rugs 101</a></li>
-                </ul>
-                <ul class="accordion">
-                    <li>Get Connected</li>
-                    <li><a href="#">Socialize</a></li>
-                    <li><a href="#">Tradeshows</a></li>
-                    <li><a href="#">Sign-up</a></li>
-                </ul>
-                <ul class="accordion">
-                    <li>Our Story</li>
-                    <li><a href="#">About Oriental Weavers, USA</a></li>
-                    <li><a href="#">Contact Oriental Weavers, USA</a></li>
-                </ul>
-            </footer>
-        </div>
+        <footer role="contentinfo">
+            <ul class="accordion">
+                <li>Products</li>
+                <li><a href="#">Area Rugs</a></li>
+                <li><a href="#">Custom Sized Rugs</a></li>
+                <li><a href="#">Rug Pads</a></li>
+                <li><a href="#">OW Hospitality</a></li>
+                <li><a href="#">Wall-to-Wall Carpet</a></li>
+                <li><a href="#">Beauty Inside &amp; Out</a></li>
+                <li><a href="#">Made in the USA</a></li>
+            </ul>
+            <ul class="accordion">
+                <li>Inspired Design</li>
+                <li><a href="#">Today's Trends</a></li>
+                <li><a href="#">Lifestyle Gallery</a></li>
+                <li><a href="#">Choosing the Right Size</a></li>
+                <li><a href="#">Rugs 101</a></li>
+            </ul>
+            <ul class="accordion">
+                <li>Get Connected</li>
+                <li><a href="#">Socialize</a></li>
+                <li><a href="#">Tradeshows</a></li>
+                <li><a href="#">Sign-up</a></li>
+            </ul>
+            <ul class="accordion">
+                <li>Our Story</li>
+                <li><a href="#">About Oriental Weavers, USA</a></li>
+                <li><a href="#">Contact Oriental Weavers, USA</a></li>
+            </ul>
+        </footer>
 
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
