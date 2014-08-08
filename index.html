@@ -67,15 +67,24 @@
         <main role="main">
             <figure>
                 <picture alt="carpet name">
-                    <source src="img/big-320.jpg">
-                    <source src="img/big-640.jpg" media="(min-width:440px)">
-                    <source src="img/big-1500.jpg" media="(min-width:600px)">
+                    <source src="img/big1-320.jpg">
+                    <source src="img/big1-640.jpg" media="(min-width:440px)">
+                    <source src="img/big1-1500.jpg" media="(min-width:600px)">
                     <noscript>
-                        <img src="img/big-1500.png" alt="carpet name">
+                        <img src="img/big1-1500.png" alt="carpet name">
                     </noscript>
                 </picture>
-                <button id="main-img-prev" value="previous">&lsaquo;</button>
-                <button id="main-img-next" value="next">&rsaquo;</button>
+                <picture alt="carpet name">
+                    <source src="img/big2-320.jpg">
+                    <source src="img/big2-640.jpg" media="(min-width:440px)">
+                    <source src="img/big2-1500.jpg" media="(min-width:600px)">
+                    <noscript>
+                        <img src="img/big2-1500.png" alt="carpet name">
+                    </noscript>
+                </picture>
+
+                <button id="main-img-prev" class="button" value="previous" disabled>&lsaquo;</button>
+                <button id="main-img-next" class="button" value="next">&rsaquo;</button>
             </figure>
         </main>
 

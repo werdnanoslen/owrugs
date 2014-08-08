@@ -56,3 +56,29 @@ nav#main-nav ul li a {
 nav#main-nav #nav-site {
     font-weight: bold;
 }
+
+/* Main page picture nav */
+main figure {
+    position: relative;
+    overflow-x: hidden;
+}
+main figure picture:not(:first-of-type) {
+    display: none;
+}
+main figure button#main-img-prev,
+main figure button#main-img-next {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 8em;
+    height: 128px;
+    line-height: 1;
+    margin-top: -64px;
+    padding: 0 8px;
+    position: absolute;
+    top: 50%;
+}
+main figure button#main-img-prev {
+    left: 0;
+}
+main figure button#main-img-next {
+    right: 0;
+}
