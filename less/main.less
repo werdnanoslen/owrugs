@@ -22,6 +22,7 @@ nav#main-nav {
     padding: 8px;
     position: absolute;
     right: 0;
+    z-index: 1;
 }
 nav#main-nav input[name=search],
 nav#main-nav button[type=submit] {
@@ -39,7 +40,6 @@ nav#main-nav ul li {
     background-color: @list-item-light;
     margin-bottom: 4px;
 }
-nav#main-nav ul li:hover,
 nav#main-nav ul li:active {
     background-color: @list-item-dark;
 }
@@ -57,6 +57,36 @@ nav#main-nav #nav-site {
     font-weight: bold;
 }
 
+/* Footer */
+footer ul.accordion {
+    margin-bottom: 5px;
+}
+footer ul.accordion li:first-child {
+    background-color: @list-item-light;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+footer ul.accordion li {
+    background-color: @list-item-light;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+footer ul.accordion li:last-child {
+    margin-bottom: 0;
+}
+footer ul.accordion li:active,
+footer ul.accordion-open li {
+    background-color: @list-item-dark;
+}
+footer ul.accordion li a {
+    color: inherit;
+    display: block;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-decoration: none;
+}
+
 /* Main page picture nav */
 main figure {
     position: relative;
@@ -68,17 +98,22 @@ main figure picture:not(:first-of-type) {
 main figure button#main-img-prev,
 main figure button#main-img-next {
     background-color: rgba(255, 255, 255, 0.8);
+    background-position: center;
+    background-repeat: no-repeat;
     font-size: 8em;
-    height: 128px;
+    height: 80px;
+    width: 50px;
     line-height: 1;
-    margin-top: -64px;
+    margin-top: -40px;
     padding: 0 8px;
     position: absolute;
     top: 50%;
 }
 main figure button#main-img-prev {
+    background-image: url('../img/big-arrow-left.png');
     left: 0;
 }
 main figure button#main-img-next {
+    background-image: url('../img/big-arrow-right.png');
     right: 0;
 }
