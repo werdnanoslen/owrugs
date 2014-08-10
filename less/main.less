@@ -15,6 +15,20 @@ header .grid-item:last-of-type {
     text-align: right;
 }
 
+form[name=search] {
+    width: 100%;
+    position: relative;
+}
+form[name=search] input[name=search] {
+    padding-right: 50px;
+}
+form[name=search] button[type=submit] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+}
+
 /* Main-nav */
 nav#main-nav {
     background-color: @white;
@@ -23,18 +37,6 @@ nav#main-nav {
     position: absolute;
     right: 0;
     z-index: 1;
-}
-nav#main-nav input[name=search],
-nav#main-nav button[type=submit] {
-    display: inline-block;
-    margin: 0;
-}
-nav#main-nav input[name=search] {
-    width: 80%;
-}
-nav#main-nav button[type=submit] {
-    margin-left: -3px;
-    width: 20%;
 }
 nav#main-nav ul li {
     background-color: @list-item-light;
