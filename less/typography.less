@@ -101,6 +101,10 @@ a {
         outline: 1px dotted @black;
     }
 }
+a[disabled] {
+    color: @base-muted-color !important;
+    pointer-events: none;
+}
 
 /**
  * Common typographical elements
@@ -262,9 +266,20 @@ h6, .h6 {
     text-rendering: optimizeLegibility;
 }
 
-h1, .h1 { font-size: 1.777rem; }
-h2, .h2 { font-size: 1.333rem; }
-h3, .h3 { font-size: 1.125rem; }
+h1, .h1 {
+    font-size: 1.777rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2, .h2 {
+    font-size: 1.333rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+h3, .h3 {
+    font-size: 1.125rem;
+    font-weight: lighter;
+}
 
 h4, .h4,
 h5, .h5,

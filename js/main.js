@@ -48,4 +48,14 @@ $(function() {
             }
         });
     }
+
+    /* Search page */
+    var searchPageNumber = parseInt($('#search-controls-select').val());
+    var numSearchPages = parseInt($('#search-controls-numpages').text());
+    if (searchPageNumber < numSearchPages) {
+        $('#search-controls-next').removeAttr('disabled');
+    }
+    if (searchPageNumber > 1) {
+        $('#search-controls-prev').removeAttr('disabled');
+    }
 });

@@ -6,6 +6,10 @@
 
 body {
     position: relative;
+    .wrapper;
+}
+header, main {
+    .grid;
 }
 
 header > * {
@@ -13,6 +17,11 @@ header > * {
 }
 header .grid-item:last-of-type {
     text-align: right;
+}
+
+img.icon {
+    display: inline;
+    height: @base-font-size;
 }
 
 /* Main-nav */
@@ -25,11 +34,11 @@ nav#main-nav {
     z-index: 1;
 }
 nav#main-nav ul li {
-    background-color: @list-item-light;
+    background-color: @green-light;
     margin-bottom: 4px;
 }
 nav#main-nav ul li:active {
-    background-color: @list-item-dark;
+    background-color: @green-dark;
 }
 nav#main-nav ul li:last-child {
     margin-bottom: 0;
@@ -46,17 +55,21 @@ nav#main-nav #nav-site {
 }
 
 /* Footer */
+footer {
+    margin-top: 5px;
+    border-top: 5px double @gray-darker;
+}
 footer ul.accordion {
     margin-bottom: 5px;
 }
 footer ul.accordion li:first-child {
-    background-color: @list-item-light;
+    background-color: @green-light;
     font-weight: bold;
     padding-bottom: 8px;
     padding-top: 8px;
 }
 footer ul.accordion li {
-    background-color: @list-item-light;
+    background-color: @green-light;
     margin-bottom: 4px;
     text-transform: uppercase;
 }
@@ -65,7 +78,7 @@ footer ul.accordion li:last-child {
 }
 footer ul.accordion li:active,
 footer ul.accordion-open li {
-    background-color: @list-item-dark;
+    background-color: @green-dark;
 }
 footer ul.accordion li a {
     color: inherit;
@@ -104,4 +117,46 @@ main figure button#main-img-prev {
 main figure button#main-img-next {
     background-image: url('../img/big-arrow-right.png');
     right: 0;
+}
+
+/* Search page */
+#filter-button img.icon{
+    height: @button-small-font-size;
+}
+.search-item {
+    margin-bottom: 15px;
+    display: block;
+}
+.search-item:active {
+    -webkit-animation: tap 1s ease-out;
+    animation: tap 1s ease-out;
+}
+    @-webkit-keyframes tap {
+        50% {background: @green-light;}
+    }
+    @keyframes tap {
+        50% {background: @green-light;}
+    }
+.search-item-image {
+    .grid-item;
+    .one-half;
+}
+.search-item-name {
+    .grid-item;
+    .one-half;
+}
+#search-controls {
+    .grid-item;
+    .one-whole;
+}
+#search-controls * {
+    .h3;
+    display: inline;
+    vertical-align: baseline;
+}
+#search-controls-pages {
+    margin: 0 15px;
+}
+#search-controls-select {
+    width: auto;
 }

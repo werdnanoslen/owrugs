@@ -24,12 +24,12 @@
         <script src="js/vendor/modernizr-2.8.1.min.js"></script>
     </head>
 
-    <body class="wrapper">
+    <body>
         <!--[if lt IE 8]>
             <p class="browsehappy">It looks like you are using an outdated browser. Please <a href="http://whatbrowser.org">consider upgrading</a> for a faster, better, and safer web experience.</p>
         <![endif]-->
 
-        <header role="banner" class="grid">
+        <header role="banner">
             <div class="grid-item one-half">
                 <a href="/">
                     <img id="logo" src="img/OW_logo.png" alt="logo" />
@@ -89,6 +89,70 @@
                 <button id="main-img-next" class="button" value="next"></button>
             </figure>
             <!-- ...Home page -->
+
+
+            <!-- Search page... -->
+            <form name="search" class="grid-item one-whole">
+                <input type="search" placeholder="Search products" name="search" />
+                <button class="button button-primary" type="submit">Go</button>
+            </form>
+
+            <div class="grid-item one-whole">
+                <button id="filter-button" class="button button-small float-right">Filter <img src="img/icon-filter.svg" class="icon" /></button>
+                <h3><span id="search-results-count">0</span> Results:</h3>
+            </div>
+
+            <a class="search-item" href="#">
+                <div class="search-item-image">
+                    <img src="http://placehold.it/300x233" alt="product name"/>
+                </div>
+                <div class="search-item-name">
+                    <h1>Adrienne</h1>
+                    <h2>4178b</h2>
+                </div>
+            </a>
+
+            <a class="search-item" href="#">
+                <div class="search-item-image">
+                    <img src="http://placehold.it/300x233" alt="product name"/>
+                </div>
+                <div class="search-item-name">
+                    <h1>Adrienne</h1>
+                    <h2>4178b</h2>
+                </div>
+            </a>
+
+            <a class="search-item" href="#">
+                <div class="search-item-image">
+                    <img src="http://placehold.it/300x233" alt="product name"/>
+                </div>
+                <div class="search-item-name">
+                    <h1>Adrienne</h1>
+                    <h2>4178b</h2>
+                </div>
+            </a>
+
+            <a class="search-item" href="#">
+                <div class="search-item-image">
+                    <img src="http://placehold.it/300x233" alt="product name"/>
+                </div>
+                <div class="search-item-name">
+                    <h1>Adrienne</h1>
+                    <h2>4178b</h2>
+                </div>
+            </a>
+
+            <div id="search-controls">
+                <a id="search-controls-prev" href="#" disabled>&lsaquo; Prev</a>
+                <div id="search-controls-pages">
+                    <select id="search-controls-select">
+                        <option value="1">Page 1</option>
+                    </select>
+                    of <span id="search-controls-numpages">1</span>
+                </div>
+                <a id="search-controls-next" href="#" disabled>Next &rsaquo;</a>
+            </div>
+            <!-- ...Search page -->
 
         </main>
 
