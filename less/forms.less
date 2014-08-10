@@ -155,3 +155,20 @@ select {
 textarea {
     resize: vertical; /* 1 */
 }
+
+/**
+ * Inset search form
+ */
+form[name=search] {
+    width: 100%;
+    position: relative;
+}
+form[name=search] input[name=search] {
+    padding-right: 50px;
+}
+form[name=search] button[type=submit] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+}
