@@ -272,16 +272,20 @@ h1, .h1 {
     text-transform: uppercase;
 }
 h2, .h2 {
-    font-size: 1.333rem;
-    font-weight: lighter;
+    font-size: 1.5rem;
+    font-weight: bold;
     text-transform: uppercase;
 }
 h3, .h3 {
+    font-size: 1.333rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+h4, .h4 {
     font-size: 1.125rem;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
-h4, .h4,
 h5, .h5,
 h6, .h6 { font-size: @base-font-size; }
 
@@ -317,6 +321,11 @@ hr {
             line-height: 1;
         }
     }
+}
+
+img.icon {
+    display: inline;
+    height: @base-font-size;
 }
 
 /* Address styling not present in IE 8/9 */

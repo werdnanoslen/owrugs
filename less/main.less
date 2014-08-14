@@ -4,27 +4,29 @@
    Main ($main)
 \* ================================================================== */
 
+
+/* Page... */
 body {
     position: relative;
     .wrapper;
 }
-header, main {
+/* ...Page */
+
+
+/* Header... */
+header {
     .grid;
 }
-
 header > * {
     margin: 10px 0;
 }
 header .grid-item:last-of-type {
     text-align: right;
 }
+/* ...Header */
 
-img.icon {
-    display: inline;
-    height: @base-font-size;
-}
 
-/* Main-nav */
+/* Main-nav... */
 nav#main-nav {
     background-color: @white;
     display: none;
@@ -53,13 +55,92 @@ nav#main-nav ul li a {
 nav#main-nav #nav-site {
     font-weight: bold;
 }
+/* ...Main-nav */
 
-/* Footer */
+
+/* Mains (pages)... */
+main {
+    .grid;
+}
+main:not(:first-of-type) {
+    display: none;
+}
+
+/* Home page... */
+main#page-home figure {
+    position: relative;
+    overflow-x: hidden;
+}
+main#page-home figure picture:not(:first-of-type) {
+    display: none;
+}
+main#page-home figure button#main-img-prev,
+main#page-home figure button#main-img-next {
+    background-color: rgba(255, 255, 255, 0.8);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 8em;
+    height: 80px;
+    width: 50px;
+    line-height: 1;
+    margin-top: -40px;
+    padding: 0 8px;
+    position: absolute;
+    top: 50%;
+}
+main#page-home figure button#main-img-prev {
+    background-image: url('../img/big-arrow-left.png');
+    left: @grid-gutter;
+}
+main#page-home figure button#main-img-next {
+    background-image: url('../img/big-arrow-right.png');
+    right: 0;
+}
+/* ...Home page */
+
+
+/* Search page... */
+main#page-search #filter-button img.icon{
+    height: @button-small-font-size;
+}
+main#page-search .search-item {
+    margin-bottom: 15px;
+    display: block;
+}
+main#page-search .search-item:active {
+    -webkit-animation: tap 1s ease-out;
+    animation: tap 1s ease-out;
+}
+    @-webkit-keyframes tap {
+        50% {background: @green-light;}
+    }
+    @keyframes tap {
+        50% {background: @green-light;}
+    }
+main#page-search #search-controls * {
+    .h4;
+    display: inline;
+    vertical-align: baseline;
+}
+main#page-search #search-controls-pages {
+    margin: 0 15px;
+}
+main#page-search #search-controls-select {
+    width: auto;
+}
+/* ...Search page */
+
+/* ...Mains (pages) */
+
+
+/* Footer... */
 footer {
+    .grid;
     margin-top: 5px;
-    border-top: 5px double @gray-darker;
 }
 footer ul.accordion {
+    .grid-item;
+    .one-whole;
     margin-bottom: 5px;
 }
 footer ul.accordion li:first-child {
@@ -87,76 +168,4 @@ footer ul.accordion li a {
     padding-top: 8px;
     text-decoration: none;
 }
-
-/* Main page picture nav */
-main figure {
-    position: relative;
-    overflow-x: hidden;
-}
-main figure picture:not(:first-of-type) {
-    display: none;
-}
-main figure button#main-img-prev,
-main figure button#main-img-next {
-    background-color: rgba(255, 255, 255, 0.8);
-    background-position: center;
-    background-repeat: no-repeat;
-    font-size: 8em;
-    height: 80px;
-    width: 50px;
-    line-height: 1;
-    margin-top: -40px;
-    padding: 0 8px;
-    position: absolute;
-    top: 50%;
-}
-main figure button#main-img-prev {
-    background-image: url('../img/big-arrow-left.png');
-    left: @grid-gutter;
-}
-main figure button#main-img-next {
-    background-image: url('../img/big-arrow-right.png');
-    right: 0;
-}
-
-/* Search page */
-#filter-button img.icon{
-    height: @button-small-font-size;
-}
-.search-item {
-    margin-bottom: 15px;
-    display: block;
-}
-.search-item:active {
-    -webkit-animation: tap 1s ease-out;
-    animation: tap 1s ease-out;
-}
-    @-webkit-keyframes tap {
-        50% {background: @green-light;}
-    }
-    @keyframes tap {
-        50% {background: @green-light;}
-    }
-.search-item-image {
-    .grid-item;
-    .one-half;
-}
-.search-item-name {
-    .grid-item;
-    .one-half;
-}
-#search-controls {
-    .grid-item;
-    .one-whole;
-}
-#search-controls * {
-    .h3;
-    display: inline;
-    vertical-align: baseline;
-}
-#search-controls-pages {
-    margin: 0 15px;
-}
-#search-controls-select {
-    width: auto;
-}
+/* ...Footer */

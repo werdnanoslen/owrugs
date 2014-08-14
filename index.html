@@ -30,14 +30,12 @@
         <![endif]-->
 
         <header role="banner">
-            <div class="grid-item one-half">
-                <a href="/">
-                    <img id="logo" src="img/OW_logo.png" alt="logo" />
-                </a>
-            </div>
-            <div class="grid-item one-half">
-                <button id="nav-toggle" class="button button-primary button-small">Menu &#9776;</button>
-            </div>
+            <a href="/">
+                <img id="logo" src="img/OW_logo.png" alt="logo" />
+            </a>
+            <button id="nav-toggle" class="button button-primary button-small">
+                Menu &#9776;
+            </button>
         </header>
 
         <nav id="main-nav" role="navigation">
@@ -64,9 +62,9 @@
             </ul>
         </nav>
 
-        <main role="main">
 
-            <!-- Home page... --
+        <!-- Home page... -->
+        <main role="main" id="page-home">
             <figure class="grid-item one-whole">
                 <picture alt="carpet name">
                     <source src="img/big1-320.jpg">
@@ -88,10 +86,12 @@
                 <button id="main-img-prev" class="button" value="previous" disabled></button>
                 <button id="main-img-next" class="button" value="next"></button>
             </figure>
-            <!-- ...Home page -->
+        </main>
+        <!-- ...Home page -->
 
 
-            <!-- Search page... -->
+        <!-- Search page... -->
+        <main role="main" id="page-search">
             <form name="search" class="grid-item one-whole">
                 <input type="search" placeholder="Search products" name="search" />
                 <button class="button button-primary" type="submit">Go</button>
@@ -99,50 +99,40 @@
 
             <div class="grid-item one-whole">
                 <button id="filter-button" class="button button-small float-right">Filter <img src="img/icon-filter.svg" class="icon" /></button>
-                <h3><span id="search-results-count">0</span> Results:</h3>
+                <h4><span id="search-results-count">0</span> Results:</h4>
             </div>
 
             <a class="search-item" href="#">
-                <div class="search-item-image">
-                    <img src="img/adrienne_4178b.jpg" alt="product name"/>
+                <div class+"grid-item one-half">
+                    <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
                 </div>
-                <div class="search-item-name">
-                    <h1>Adrienne</h1>
-                    <h2>4178b</h2>
-                </div>
-            </a>
-
-            <a class="search-item" href="#">
-                <div class="search-item-image">
-                    <img src="img/adrienne_4178b.jpg" alt="product name"/>
-                </div>
-                <div class="search-item-name">
-                    <h1>Adrienne</h1>
-                    <h2>4178b</h2>
+                <div class="grid-item one-half">
+                    <h2 class="search-item-name">Adrienne</h2>
+                    <h3 class="search-item-sku">4178b</h3>
                 </div>
             </a>
 
             <a class="search-item" href="#">
-                <div class="search-item-image">
-                    <img src="img/adrienne_4178b.jpg" alt="product name"/>
+                <div class+"grid-item one-half">
+                    <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
                 </div>
-                <div class="search-item-name">
-                    <h1>Adrienne</h1>
-                    <h2>4178b</h2>
+                <div class="grid-item one-half">
+                    <h2 class="search-item-name">Adrienne</h2>
+                    <h3 class="search-item-sku">4178b</h3>
                 </div>
             </a>
 
             <a class="search-item" href="#">
-                <div class="search-item-image">
-                    <img src="img/adrienne_4178b.jpg" alt="product name"/>
+                <div class+"grid-item one-half">
+                    <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
                 </div>
-                <div class="search-item-name">
-                    <h1>Adrienne</h1>
-                    <h2>4178b</h2>
+                <div class="grid-item one-half">
+                    <h2 class="search-item-name">Adrienne</h2>
+                    <h3 class="search-item-sku">4178b</h3>
                 </div>
             </a>
 
-            <div id="search-controls">
+            <div id="search-controls" class="grid-item one-whole">
                 <a id="search-controls-prev" href="#" disabled>&lsaquo; Prev</a>
                 <div id="search-controls-pages">
                     <select id="search-controls-select">
@@ -152,9 +142,8 @@
                 </div>
                 <a id="search-controls-next" href="#" disabled>Next &rsaquo;</a>
             </div>
-            <!-- ...Search page -->
-
         </main>
+        <!-- ...Search page -->
 
         <footer role="contentinfo">
             <ul class="accordion">
