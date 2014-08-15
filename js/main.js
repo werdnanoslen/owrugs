@@ -1,14 +1,15 @@
 // When the DOM is ready,
 $(function() {
+    /* global... */
     $('button#nav-toggle').on('click', function() {
         $(this).toggleClass('active');
         $('nav#main-nav').slideToggle('fast');
     });
+    /* ...global */
 
-    /* Main page */
 
+    /* #page-main... */
     $('picture').picture();
-
     var numPictures = $('figure picture').length;
     if (numPictures < 2) {
         $('figure button#main-img-prev, figure button#main-img-next').hide();
@@ -48,8 +49,10 @@ $(function() {
             }
         });
     }
+    /* ...#page-main */
 
-    /* Search page */
+
+    /* #page-search... */
     var searchPageNumber = parseInt($('#search-controls-select').val());
     var numSearchPages = parseInt($('#search-controls-numpages').text());
     if (searchPageNumber < numSearchPages) {
@@ -58,4 +61,5 @@ $(function() {
     if (searchPageNumber > 1) {
         $('#search-controls-prev').removeAttr('disabled');
     }
+    /* ...#page-search */
 });

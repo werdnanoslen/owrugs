@@ -39,9 +39,13 @@
 @heading-font-weight:              700;
 
 // Layout
-@grid-gutter:                      (@base-rem-unit * 2);
 @grid-breakpoint-medium:           600px;
 @grid-breakpoint-large:            960px;
+@columns:                          12;
+@column-width:                     60;
+@gutter-width:                     20;
+@gridsystem-width:                 (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+@total-width:                      100%; /*@gridsystem-width;*/
 
 // Syntax
 @syntax-font-size:                 0.875rem;

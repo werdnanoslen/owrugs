@@ -18,7 +18,7 @@
          url('../fonts/lato/lato-black-webfont.woff') format('woff'),
          url('../fonts/lato/lato-black-webfont.ttf') format('truetype'),
          url('../fonts/lato/lato-black-webfont.svg#latoblack') format('svg');
-    font-weight: bolder;
+    font-weight: 900;
     font-style: normal;
 }
 @font-face {
@@ -394,29 +394,4 @@ sup {
 
 sub {
     bottom: -0.238rem;
-}
-
-/**
- * Text alignment ($text-alignment)
- */
-
-.text-left    { text-align: left;    }
-.text-right   { text-align: right;   }
-.text-center  { text-align: center;  }
-.text-justify { text-align: justify; }
-
-/* Medium-sized breakpoint */
-@media only screen and (min-width: @grid-breakpoint-medium) {
-    .medium-text-left    { text-align: left;    }
-    .medium-text-right   { text-align: right;   }
-    .medium-text-center  { text-align: center;  }
-    .medium-text-justify { text-align: justify; }
-}
-
-/* Large-sized breakpoint */
-@media only screen and (min-width: @grid-breakpoint-large) {
-    .large-text-left    { text-align: left;    }
-    .large-text-right   { text-align: right;   }
-    .large-text-center  { text-align: center;  }
-    .large-text-justify { text-align: justify; }
 }

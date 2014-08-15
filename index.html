@@ -30,42 +30,38 @@
         <![endif]-->
 
         <header role="banner">
-            <a href="/">
-                <img id="logo" src="img/OW_logo.png" alt="logo" />
+            <a href="/" id="logo">
+                <img src="img/OW_logo.png" alt="logo" />
             </a>
-            <button id="nav-toggle" class="button button-primary button-small">
+            <button id="nav-toggle" class="button button-primary">
                 Menu &#9776;
             </button>
+
+            <nav id="main-nav" role="navigation">
+                <form name="search">
+                    <input type="search" placeholder="Search products" name="search" />
+                    <button class="button button-primary" type="submit">Go</button>
+                </form>
+                <ul id="nav-site">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Retail Locator</a></li>
+                    <li><a href="#">Dealer Area</a></li>
+                </ul>
+                <hr>
+                <ul id="nav-content">
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Inspired Design</a></li>
+                    <li><a href="#">Get Connected</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Catalog</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <nav id="main-nav" role="navigation">
-            <form name="search">
-                <input type="search" placeholder="Search products" name="search" />
-                <button class="button button-primary" type="submit">Go</button>
-            </form>
-
-            <ul id="nav-site">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Retail Locator</a></li>
-                <li><a href="#">Dealer Area</a></li>
-            </ul>
-
-            <hr>
-
-            <ul id="nav-content">
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Inspired Design</a></li>
-                <li><a href="#">Get Connected</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Catalog</a></li>
-            </ul>
-        </nav>
-
-
-        <!-- Home page... -->
+        <!-- Home page... --
         <main role="main" id="page-home">
-            <figure class="grid-item one-whole">
+            <figure>
                 <picture alt="carpet name">
                     <source src="img/big1-320.jpg">
                     <source src="img/big1-640.jpg" media="(min-width:440px)">
@@ -92,47 +88,35 @@
 
         <!-- Search page... -->
         <main role="main" id="page-search">
-            <form name="search" class="grid-item one-whole">
+            <form name="search">
                 <input type="search" placeholder="Search products" name="search" />
                 <button class="button button-primary" type="submit">Go</button>
             </form>
 
-            <div class="grid-item one-whole">
-                <button id="filter-button" class="button button-small float-right">Filter <img src="img/icon-filter.svg" class="icon" /></button>
+            <div id="results-info">
+                <button id="filter-button" class="button button-small">Filter <img src="img/icon-filter.svg" class="icon" /></button>
                 <h4><span id="search-results-count">0</span> Results:</h4>
             </div>
 
             <a class="search-item" href="#">
-                <div class+"grid-item one-half">
-                    <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
-                </div>
-                <div class="grid-item one-half">
-                    <h2 class="search-item-name">Adrienne</h2>
-                    <h3 class="search-item-sku">4178b</h3>
-                </div>
+                <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
+                <h2 class="search-item-name">Adrienne</h2>
+                <h3 class="search-item-sku">4178b</h3>
             </a>
 
             <a class="search-item" href="#">
-                <div class+"grid-item one-half">
-                    <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
-                </div>
-                <div class="grid-item one-half">
-                    <h2 class="search-item-name">Adrienne</h2>
-                    <h3 class="search-item-sku">4178b</h3>
-                </div>
+                <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
+                <h2 class="search-item-name">Adrienne</h2>
+                <h3 class="search-item-sku">4178b</h3>
             </a>
 
             <a class="search-item" href="#">
-                <div class+"grid-item one-half">
-                    <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
-                </div>
-                <div class="grid-item one-half">
-                    <h2 class="search-item-name">Adrienne</h2>
-                    <h3 class="search-item-sku">4178b</h3>
-                </div>
+                <img class="search-item-image" src="img/adrienne_4178b.jpg" alt="product name"/>
+                <h2 class="search-item-name">Adrienne</h2>
+                <h3 class="search-item-sku">4178b</h3>
             </a>
 
-            <div id="search-controls" class="grid-item one-whole">
+            <div id="search-controls">
                 <a id="search-controls-prev" href="#" disabled>&lsaquo; Prev</a>
                 <div id="search-controls-pages">
                     <select id="search-controls-select">

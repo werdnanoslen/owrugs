@@ -4,27 +4,15 @@
    Main ($main)
 \* ================================================================== */
 
-
-/* Page... */
-body {
-    position: relative;
-    .wrapper;
-}
-/* ...Page */
-
-
 /* Header... */
 header {
-    .grid;
+    .column(12);
+    padding: 10px 0;
+    position: relative;
 }
-header > * {
-    margin: 10px 0;
+header button#nav-toggle {
+    float: right;
 }
-header .grid-item:last-of-type {
-    text-align: right;
-}
-/* ...Header */
-
 
 /* Main-nav... */
 nav#main-nav {
@@ -57,10 +45,12 @@ nav#main-nav #nav-site {
 }
 /* ...Main-nav */
 
+/* ...Header */
+
 
 /* Mains (pages)... */
 main {
-    .grid;
+    .column(12);
 }
 main:not(:first-of-type) {
     display: none;
@@ -81,16 +71,16 @@ main#page-home figure button#main-img-next {
     background-repeat: no-repeat;
     font-size: 8em;
     height: 80px;
-    width: 50px;
     line-height: 1;
     margin-top: -40px;
     padding: 0 8px;
     position: absolute;
     top: 50%;
+    width: 50px;
 }
 main#page-home figure button#main-img-prev {
     background-image: url('../img/big-arrow-left.png');
-    left: @grid-gutter;
+    left: @gutter-width;
 }
 main#page-home figure button#main-img-next {
     background-image: url('../img/big-arrow-right.png');
@@ -100,12 +90,20 @@ main#page-home figure button#main-img-next {
 
 
 /* Search page... */
-main#page-search #filter-button img.icon{
+main#page-search #results-info h4 {
+    padding: @button-small-padding;
+    padding-left: 0;
+}
+main#page-search #results-info #filter-button {
+    float: right;
+}
+main#page-search #results-info #filter-button img.icon{
     height: @button-small-font-size;
 }
 main#page-search .search-item {
+    display: inline-block;
     margin-bottom: 15px;
-    display: block;
+    text-decoration: none;
 }
 main#page-search .search-item:active {
     -webkit-animation: tap 1s ease-out;
@@ -117,6 +115,13 @@ main#page-search .search-item:active {
     @keyframes tap {
         50% {background: @green-light;}
     }
+main#page-search .search-item-image {
+    .column(6);
+}
+main#page-search .search-item-name,
+main#page-search .search-item-sku, {
+    .push(6);
+}
 main#page-search #search-controls * {
     .h4;
     display: inline;
@@ -135,12 +140,10 @@ main#page-search #search-controls-select {
 
 /* Footer... */
 footer {
-    .grid;
+    .column(12);
     margin-top: 5px;
 }
 footer ul.accordion {
-    .grid-item;
-    .one-whole;
     margin-bottom: 5px;
 }
 footer ul.accordion li:first-child {
