@@ -30,8 +30,8 @@
         <![endif]-->
 
         <header role="banner">
-            <a href="/" id="logo">
-                <img src="img/OW_logo.png" alt="logo" />
+            <a href="/">
+                <img src="img/OW_logo.png" alt="logo" id="logo" />
             </a>
             <button id="nav-toggle" class="button button-primary">
                 Menu &#9776;
@@ -86,7 +86,7 @@
         <!-- ...Home page -->
 
 
-        <!-- Search page... -->
+        <!-- Search page... --
         <main role="main" id="page-search">
             <form name="search">
                 <input type="search" placeholder="Search products" name="search" />
@@ -128,6 +128,30 @@
             </div>
         </main>
         <!-- ...Search page -->
+
+
+        <!-- Product page... -->
+        <main role="main" id="page-product">
+            <h1 class="product-name">Adrienne <span class="product-sku">4178b</span></h1>
+            <figure class="product-image">
+                <picture alt="carpet name">
+                    <source src="img/adrienne_4178b-320.jpg">
+                    <source src="img/adrienne_4178b-640.jpg" media="(min-width:440px)">
+                    <source src="img/adrienne_4178b-1500.jpg" media="(min-width:600px)">
+                    <noscript>
+                        <img src="img/adrienne_4178b-1500.png" alt="carpet name">
+                    </noscript>
+                </picture>
+                <ul class="product-image-alts">
+                    <li active="active"><img src="img/adrienne_4178b-t.jpg" alt="2x8" /></li>
+                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
+                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
+                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
+                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
+                </ul>
+            </figure>
+        </main>
+        <!-- ...Product page -->
 
         <footer role="contentinfo">
             <ul class="accordion">

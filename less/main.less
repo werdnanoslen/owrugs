@@ -4,14 +4,23 @@
    Main ($main)
 \* ================================================================== */
 
+/* Body... */
+body {
+    .column(4);
+}
+/* ...Body */
+
 /* Header... */
 header {
-    .column(12);
+    .row(4);
     padding: 10px 0;
     position: relative;
 }
 header button#nav-toggle {
     float: right;
+}
+header img#logo {
+    max-width: 70%;
 }
 
 /* Main-nav... */
@@ -50,7 +59,7 @@ nav#main-nav #nav-site {
 
 /* Mains (pages)... */
 main {
-    .column(12);
+    .row(4);
 }
 main:not(:first-of-type) {
     display: none;
@@ -116,11 +125,11 @@ main#page-search .search-item:active {
         50% {background: @green-light;}
     }
 main#page-search .search-item-image {
-    .column(6);
+    .column(2);
 }
 main#page-search .search-item-name,
 main#page-search .search-item-sku, {
-    .push(6);
+    .push(2);
 }
 main#page-search #search-controls * {
     .h4;
@@ -135,12 +144,56 @@ main#page-search #search-controls-select {
 }
 /* ...Search page */
 
+/* Product page... */
+.product-sku {
+    font-weight: 100;
+}
+ul.product-image-alts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    -webkit-text-align-last: justify; /* not implemented yet */
+    text-align-last: justify; /* IE */
+}
+ul.product-image-alts:before{
+    content: '';
+    display: block;
+    width: 100%;
+    margin-bottom: -1.2em; /* your line-height */
+}
+ul.product-image-alts:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ul.product-image-alts li {
+    border: 1px solid @gray-dark;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    max-height: ((4*@column-width + 3*@gutter-width) / 5) * 1px;
+    max-width: ((4*@column-width + 3*@gutter-width) / 5) * 1px;
+    position: relative;
+    top: @base-line-height * @base-font-size;
+    vertical-align: middle;
+}
+ul.product-image-alts li:not(:first-of-type) {
+    margin-left: -4px;
+}
+ul.product-image-alts li:active {
+    border: 1px solid @green-light;
+    background-color: @green-light;
+}
+/* ...Product page */
+
 /* ...Mains (pages) */
 
 
 /* Footer... */
 footer {
-    .column(12);
+    .row(4);
     margin-top: 5px;
 }
 footer ul.accordion {
