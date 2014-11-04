@@ -4,59 +4,23 @@
    Main ($main)
 \* ================================================================== */
 
-/* Body... */
-body {
+/* Body sections... */
+body > * {
+    margin-bottom: 5px;
+}
+header, main, footer {
     .column(4);
 }
-/* ...Body */
+/* ...Body sections */
+
 
 /* Header... */
-header {
-    .row(1);
-    padding: 10px 0;
-    position: relative;
+header #logo img {
+    height: 30px;
 }
-header #nav-toggle {
+header #menu {
     float: right;
 }
-header #nav-toggle:hover {
-    color: white;
-}
-header img#logo {
-    max-width: 70%;
-}
-
-/* Main-nav... */
-nav#main-nav {
-    background-color: @white;
-    display: none;
-    padding: 8px;
-    position: absolute;
-    right: 0;
-    z-index: 1;
-}
-nav#main-nav ul li {
-    background-color: @gray-light;
-    margin-bottom: 4px;
-}
-nav#main-nav ul li:active {
-    background-color: @gray-dark;
-}
-nav#main-nav ul li:last-child {
-    margin-bottom: 0;
-}
-nav#main-nav ul li a {
-    color: inherit;
-    display: block;
-    padding: 8px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-nav#main-nav #nav-site {
-    font-weight: bold;
-}
-/* ...Main-nav */
-
 /* ...Header */
 
 
@@ -192,10 +156,6 @@ ul.product-image-alts li:active {
 
 
 /* Footer... */
-footer {
-    .row(4);
-    margin-top: 5px;
-}
 footer > * {
     margin-bottom: 5px;
     padding: 0;
@@ -246,19 +206,11 @@ footer ul.accordion li a {
     .only-mobile {
         display: none;
     }
-
-    #main-nav {
-        display: block;
-    }
 }
 
 @media only screen and (min-width: @grid-breakpoint-large) {
     .only-mobile {
         display: none;
-    }
-
-    #main-nav {
-        display: block;
     }
 }
 /* ...Media queries */
