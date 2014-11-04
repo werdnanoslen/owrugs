@@ -16,8 +16,11 @@ header {
     padding: 10px 0;
     position: relative;
 }
-header button#nav-toggle {
+header #nav-toggle {
     float: right;
+}
+header #nav-toggle:hover {
+    color: white;
 }
 header img#logo {
     max-width: 70%;
@@ -196,32 +199,69 @@ footer {
     .row(4);
     margin-top: 5px;
 }
-footer ul.accordion {
+footer > * {
     margin-bottom: 5px;
+    padding: 0;
 }
-footer ul.accordion li:first-child {
-    background-color: @green-light;
-    font-weight: bold;
+footer form.inline-form input {
+    flex: auto;
+    padding-bottom: initial;
+    padding-top: initial;
+    width: 50px;
+}
+footer ul li {
+    background-color: @gray;
+    list-style: none;
+    margin-bottom: 4px;
+    padding-left: @base-font-size * 2;
+}
+footer ul li:first-child {
+    background-image: url('../img/accordion-arrow-closed.png');
+    background-position: 1% 50%;
+    background-repeat: no-repeat;
+    background-size: @base-font-size;
+    cursor: pointer;
+    font-weight: 900;
     padding-bottom: 8px;
     padding-top: 8px;
-}
-footer ul.accordion li {
-    background-color: @green-light;
-    margin-bottom: 4px;
     text-transform: uppercase;
 }
-footer ul.accordion li:last-child {
+footer ul li:last-child {
     margin-bottom: 0;
 }
-footer ul.accordion li:active,
-footer ul.accordion-open li {
-    background-color: @green-dark;
-}
-footer ul.accordion li a {
+footer ul li a {
     color: inherit;
     display: block;
-    padding-bottom: 8px;
-    padding-top: 8px;
     text-decoration: none;
 }
+footer ul.accordion-open li:not(:first-child) {
+    background-color: @gray-light;
+}
+footer ul.accordion li a {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
 /* ...Footer */
+
+
+/* Media queries... */
+@media only screen and (min-width: @grid-breakpoint-medium) {
+    .only-mobile {
+        display: none;
+    }
+
+    #main-nav {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: @grid-breakpoint-large) {
+    .only-mobile {
+        display: none;
+    }
+
+    #main-nav {
+        display: block;
+    }
+}
+/* ...Media queries */

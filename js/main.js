@@ -1,10 +1,7 @@
 // When the DOM is ready,
 $(function() {
     /* global... */
-    $('button#nav-toggle').on('click', function() {
-        $(this).toggleClass('active');
-        $('nav#main-nav').slideToggle('fast');
-    });
+    
     /* ...global */
 
 

@@ -33,7 +33,7 @@
             <a href="/">
                 <img src="img/OW_logo.png" alt="logo" id="logo" />
             </a>
-            <button id="nav-toggle" class="button button-primary">
+            <a id="nav-toggle" class="button button-small only-mobile" href="#footer">
                 Menu &#9776;
             </button>
 
@@ -200,7 +200,32 @@
         </main>
         <!-- ...Product page -->
 
-        <footer role="contentinfo">
+        <footer role="contentinfo" id="footer">
+            <form class="inline-form">
+                <button id="category-search" class="button button-mini">
+                    Category Search
+                    <img src="img/accordion-arrow-open.png" class="icon" />
+                </button>
+                <input type="text" name="search-keyword" placeholder="keyword or sku">
+                <button id="category-search" class="button button-mini" type="submit">
+                    <img src="img/icon_search.png" class="icon" />
+                </button>
+            </form>
+            <form class="inline-form">
+                <a id="category-search" class="button button-mini" href="#">
+                    Retail Locator
+                </a>
+                <input type="text" name="retail-locator" placeholder="city, state, or zip">
+                <button id="retail-locator" class="button button-mini" type="submit">
+                    <img src="img/icon_search.png" class="icon" />
+                </button>
+            </form>
+            <ul class="only-mobile">
+                <li><a href="#">My Favorites</a></li>
+            </ul>
+            <ul class="only-mobile">
+                <li><a href="#">Dealer Area</a></li>
+            </ul>
             <ul class="accordion">
                 <li>Products</li>
                 <li><a href="#">Area Rugs</a></li>

@@ -157,18 +157,14 @@ textarea {
 }
 
 /**
- * Inset search form
+ * Inline form
  */
-form[name=search] {
-    width: 100%;
-    position: relative;
+form.inline-form {
+    border: 1px solid #aaa;
+    display: flex;
+    flex-wrap: wrap;
 }
-form[name=search] input[name=search] {
-    padding-right: 50px;
-}
-form[name=search] button[type=submit] {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50px;
+form.inline-form > button {
+    font-weight: normal;
+    text-transform: lowercase;
 }
