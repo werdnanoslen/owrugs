@@ -47,4 +47,4 @@
 
 /**
  * Accordion
- */$(function(e){$('ul.accordion li:first-child').on('click',function(){$(this).parent().toggleClass('accordion-open').children('li:not(:first-child)').slideToggle();})});
+ */$(function(e){$('.accordion > *:first-child').on('click',function(){$(this).parent().toggleClass('accordion-open').children('*:not(:first-child)').slideToggle();})});

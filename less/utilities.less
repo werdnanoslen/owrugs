@@ -1,27 +1,22 @@
 // main: cardinal.less
 
 /* Accordion... */
-ul.accordion {
-    padding: 0;
-}
-ul.accordion li {
+.accordion > * {
     list-style: none;
-    padding-left: @base-font-size * 2;
-    font-weight: bold;
 }
-ul.accordion li:first-child {
+.accordion > *:first-child {
     cursor: pointer;
     background-image: url('../img/accordion-arrow-closed.png');
     background-position: 1% 50%;
     background-repeat: no-repeat;
     background-size: @base-font-size;
-    font-weight: 900;
+    padding-left: @base-font-size * 2;
 }
-ul.accordion-open li:first-child {
-    background-image: url('../img/accordion-arrow-open.png');
-}
-ul.accordion li:not(:first-child) {
+.accordion > *:not(:first-child) {
     display: none;
+}
+.accordion-open > *:first-child {
+    background-image: url('../img/accordion-arrow-open.png');
 }
 /* ...Accordion */
 

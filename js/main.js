@@ -1,7 +1,11 @@
 // When the DOM is ready,
 $(function() {
     /* global... */
-    
+    $('#category-search-button').on('click', function(e) {
+        e.preventDefault();
+        $('#category-search-box').slideToggle();
+        return false;
+    });
     /* ...global */
 
 
