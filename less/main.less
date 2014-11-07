@@ -72,132 +72,6 @@ header .inline-form {
 
 
 /* Mains (pages)... */
-main:not(:first-of-type) {
-    display: none;
-}
-
-/* Home page... */
-main#page-home figure {
-    position: relative;
-    overflow-x: hidden;
-}
-main#page-home figure picture:not(:first-of-type) {
-    display: none;
-}
-main#page-home figure button#main-img-prev,
-main#page-home figure button#main-img-next {
-    background-color: rgba(255, 255, 255, 0.8);
-    background-position: center;
-    background-repeat: no-repeat;
-    font-size: 8em;
-    height: 80px;
-    line-height: 1;
-    margin-top: -40px;
-    padding: 0 8px;
-    position: absolute;
-    top: 50%;
-    width: 50px;
-}
-main#page-home figure button#main-img-prev {
-    background-image: url('../img/big-arrow-left.png');
-    left: @gutter-width;
-}
-main#page-home figure button#main-img-next {
-    background-image: url('../img/big-arrow-right.png');
-    right: 0;
-}
-/* ...Home page */
-
-
-/* Search page... */
-main#page-search #results-info h4 {
-    padding: @button-small-padding;
-    padding-left: 0;
-}
-main#page-search #results-info #filter-button {
-    float: right;
-}
-main#page-search #results-info #filter-button img.icon{
-    height: @button-small-font-size;
-}
-main#page-search .search-item {
-    display: inline-block;
-    margin-bottom: 15px;
-    text-decoration: none;
-}
-main#page-search .search-item:active {
-    -webkit-animation: tap 1s ease-out;
-    animation: tap 1s ease-out;
-}
-    @-webkit-keyframes tap {
-        50% {background: @gray-light;}
-    }
-    @keyframes tap {
-        50% {background: @gray-light;}
-    }
-main#page-search .search-item-image {
-    .column(2);
-}
-main#page-search .search-item-name,
-main#page-search .search-item-sku, {
-    .push(2);
-}
-main#page-search #search-controls * {
-    .h4;
-    display: inline;
-    vertical-align: baseline;
-}
-main#page-search #search-controls-pages {
-    margin: 0 15px;
-}
-main#page-search #search-controls-select {
-    width: auto;
-}
-/* ...Search page */
-
-/* Product page... */
-.product-sku {
-    font-weight: 100;
-}
-ul.product-image-alts {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: justify;
-    -moz-text-align-last: justify;
-    -webkit-text-align-last: justify; /* not implemented yet */
-    text-align-last: justify; /* IE */
-}
-ul.product-image-alts:before{
-    content: '';
-    display: block;
-    width: 100%;
-    margin-bottom: -1.2em; /* your line-height */
-}
-ul.product-image-alts:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-}
-ul.product-image-alts li {
-    border: 1px solid @gray-dark;
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-    max-height: ((4*@column-width + 3*@gutter-width) / 5) * 1px;
-    max-width: ((4*@column-width + 3*@gutter-width) / 5) * 1px;
-    position: relative;
-    top: @base-line-height * @base-font-size;
-    vertical-align: middle;
-}
-ul.product-image-alts li:not(:first-of-type) {
-    margin-left: -4px;
-}
-ul.product-image-alts li:active {
-    border: 1px solid @gray-light;
-    background-color: @gray-light;
-}
-/* ...Product page */
 
 /* ...Mains (pages) */
 
@@ -260,7 +134,7 @@ footer ul.accordion li a {
     header, main, footer {
         .column(8);
     }
-    header > div{
+    header > div {
         .row(8);
     }
         header #logo {
@@ -310,12 +184,36 @@ footer ul.accordion li a {
     header, main, footer {
         .column(12);
     }
+    header > div {
+        .row(12);
+    }
+        header #logo {
+            .column(5, 12);
+        }
+        header nav {
+            .column(7, 12);
+        }
+        header nav a {
+            .h2;
+        }
+        header .inline-form:first-child {
+            .column(4);
+            display: flex;
+        }
+        header .inline-form:last-child {
+            .column(3);
+            display: flex;
+        }
+    main.main-static {
+        .column(8);
+        .push(2);
+    }
     footer > div {
         .row(12);
     }
-    footer ul {
-        .column(3, 12);
-        padding: 0;
-    }
+        footer ul {
+            .column(3, 12);
+            padding: 0;
+        }
 }
 /* ...Media queries */

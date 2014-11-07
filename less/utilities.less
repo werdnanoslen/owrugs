@@ -29,6 +29,39 @@
 }
 /* ...Icons */
 
+
+/* Figure... */
+figure {
+    position: relative;
+    overflow-x: hidden;
+}
+figure picture:not(:first-of-type) {
+    display: none;
+}
+figure button.figure-prev,
+figure button.figure-next {
+    background-color: rgba(255, 255, 255, 0.8);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 8em;
+    height: 80px;
+    line-height: 1;
+    margin-top: -40px;
+    padding: 0 8px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+figure button.figure-prev {
+    background-image: url('../img/big-arrow-left.png');
+    left: @gutter-width;
+}
+figure button.figure-next {
+    background-image: url('../img/big-arrow-right.png');
+    right: 0;
+}
+/* ...Figure */
+
 /* Picture... */
 picture {
     display: block;

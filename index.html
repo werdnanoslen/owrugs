@@ -37,7 +37,7 @@
                 <a id="menu" class="button button-mini only-mobile" href="#footer">
                     Menu &#9776;
                 </a>
-                <nav>
+                <nav role="navigation">
                     <ul>
                         <li><a>Products</a></li>
                         <li><a>Inspired Design</a></li>
@@ -46,7 +46,7 @@
                     </ul>
                     <hr>
                 </nav>
-                <form class="inline-form">
+                <form class="inline-form" role="search">
                     <button class="button button-mini category-search-button">
                         Category Search
                         <img src="img/accordion-arrow-open.png" class="icon" />
@@ -236,7 +236,7 @@
         </header>
 
         <!-- Static page... -->
-        <main role="main" id="page-home">
+        <main role="main" class="main-static">
             <h1>Rugs 101</h1>
             <p>Choosing the right rug can seem overwhelming at first. Not only are there hundreds of designs and color combinations, but selecting the right shape and proper size for your room must also be considered before purchasing. Use this handy guide to learn more about design and construction, as well as tips on selecting and caring for your area rugs.</p>
             <figure>
@@ -257,130 +257,15 @@
                     </noscript>
                 </picture>
 
-                <button id="main-img-prev" class="button" value="previous" disabled></button>
-                <button id="main-img-next" class="button" value="next"></button>
+                <button class="button figure-prev" value="previous" disabled></button>
+                <button class="button figure-next" value="next"></button>
             </figure>
         </main>
-        <!-- ...Home page -->
+        <!-- ...Static page -->
 
-
-        <!-- Search page... --
-        <main role="main" id="page-search">
-            <form name="search">
-                <input type="search" placeholder="Search products" name="search" />
-                <button class="button button-primary" type="submit">Go</button>
-            </form>
-
-            <div id="results-info">
-                <button id="filter-button" class="button button-small">Filter <img src="img/icon-filter.svg" class="icon" /></button>
-                <h4><span id="search-results-count">0</span> Results:</h4>
-            </div>
-
-            <a class="search-item" href="#">
-                <img class="search-item-image" src="img/adrienne_4178b-640.jpg" alt="product name"/>
-                <h2 class="search-item-name">Adrienne</h2>
-                <h3 class="search-item-sku">4178b</h3>
-            </a>
-
-            <a class="search-item" href="#">
-                <img class="search-item-image" src="img/adrienne_4178b-640.jpg" alt="product name"/>
-                <h2 class="search-item-name">Adrienne</h2>
-                <h3 class="search-item-sku">4178b</h3>
-            </a>
-
-            <a class="search-item" href="#">
-                <img class="search-item-image" src="img/adrienne_4178b-640.jpg" alt="product name"/>
-                <h2 class="search-item-name">Adrienne</h2>
-                <h3 class="search-item-sku">4178b</h3>
-            </a>
-
-            <div id="search-controls">
-                <a id="search-controls-prev" href="#" disabled>&lsaquo; Prev</a>
-                <div id="search-controls-pages">
-                    <select id="search-controls-select">
-                        <option value="1">Page 1</option>
-                    </select>
-                    of <span id="search-controls-numpages">1</span>
-                </div>
-                <a id="search-controls-next" href="#" disabled>Next &rsaquo;</a>
-            </div>
-        </main>
-        <!-- ...Search page -->
-
-
-        <!-- Product page... --
-        <main role="main" id="page-product">
-            <h1 class="product-name">Adrienne <span class="product-sku">4178b</span></h1>
-            <figure class="product-image">
-                <picture alt="carpet name">
-                    <source src="img/adrienne_4178b-320.jpg">
-                    <source src="img/adrienne_4178b-640.jpg" media="(min-width:440px)">
-                    <source src="img/adrienne_4178b-1500.jpg" media="(min-width:600px)">
-                    <noscript>
-                        <img src="img/adrienne_4178b-1500.png" alt="carpet name">
-                    </noscript>
-                </picture>
-                <ul class="product-image-alts">
-                    <li active="active"><img src="img/adrienne_4178b-t.jpg" alt="2x8" /></li>
-                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
-                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
-                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
-                    <li><img src="img/adrienne_4178b_2x8-t.png" alt="2x8" /></li>
-                </ul>
-            </figure>
-
-            <h4>Fiber:</h4>
-            <h2 class="product-fiber">Nylon</h2>
-
-            <h4>Weave:</h4>
-            <h2 class="product-weave">Machine Woven</h2>
-
-            <h4>Price Range:</h4>
-            <h2 class="product-pricerange">$$$</h2>
-
-            <table class="product-inventory">
-                <tr>
-                    <th><h4>Sizes:</h4></th>
-                    <th><h4>Inventory:</h4></th>
-                </tr>
-                <tr>
-                    <td><h2>1'x11"</h2></td>
-                    <td><h2>10+</h2></td>
-                </tr>
-                    <td><h2>1'x11"</h2></td>
-                    <td><h2>10+</h2></td>
-                </tr>
-                <tr>
-                    <td><h2>1'x11"</h2></td>
-                    <td><h2>10+</h2></td>
-                </tr>
-            </table>
-
-            <h4>You might also like:</h4>
-            <ul class="product-related">
-                <li>
-                    <h5>Allure 59A</h5>
-                    <img src="img/adrienne_4178b-320.jpg" alt="product name" />
-                </li>
-                <li>
-                    <h5>Allure 59A</h5>
-                    <img src="img/adrienne_4178b-320.jpg" alt="product name" />
-                </li>
-                <li>
-                    <h5>Allure 59A</h5>
-                    <img src="img/adrienne_4178b-320.jpg" alt="product name" />
-                </li>
-                <li>
-                    <h5>Allure 59A</h5>
-                    <img src="img/adrienne_4178b-320.jpg" alt="product name" />
-                </li>
-            </ul>
-        </main>
-        <!-- ...Product page -->
-
-        <footer role="contentinfo" id="footer">
+        <footer role="navigation" id="footer">
             <div class="row">
-                <form class="inline-form only-mobile">
+                <form class="inline-form only-mobile" role="search">
                     <button class="button button-mini category-search-button">
                         Category Search
                         <img src="img/accordion-arrow-open.png" class="icon" />
