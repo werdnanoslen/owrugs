@@ -1,11 +1,23 @@
 // When the DOM is ready,
 $(function() {
     /* global... */
-    $('#category-search-button').on('click', function(e) {
+    $('.category-search-button').on('click', function(e) {
         e.preventDefault();
-        $('#category-search-box').slideToggle();
+        $('.category-search-box').slideToggle();
         return false;
     });
+
+    function toggleMobileUI(changed) {
+        if(changed.matches) {
+            console.log('not mobile');
+            $('footer .accordion li').slideDown();
+        } else {
+            console.log('mobile');
+        }
+    }
+    var mq = window.matchMedia('(min-width: 640px)');
+    mq.addListener(toggleMobileUI);
+    toggleMobileUI(mq);
     /* ...global */
 
 
