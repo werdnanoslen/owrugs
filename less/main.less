@@ -5,6 +5,9 @@
 \* ================================================================== */
 
 /* Body sections... */
+body {
+    max-width: @total-width*((((@gutter-width+@column-width)*4)-@gutter-width) / @gridsystem-width);
+}
 body > * {
     margin-bottom: @gutter-width*0.5px !important;
     margin-top: @gutter-width*0.5px !important;
@@ -131,6 +134,9 @@ footer ul.accordion li a {
     .only-mobile {
         display: none !important;
     }
+    body {
+        max-width: @grid-breakpoint-medium;
+    }
     header, main, footer {
         .column(8);
     }
@@ -181,6 +187,9 @@ footer ul.accordion li a {
 }
 
 @media only screen and (min-width: @grid-breakpoint-large) {
+    body {
+        max-width: @grid-breakpoint-large;
+    }
     header, main, footer {
         .column(12);
     }
