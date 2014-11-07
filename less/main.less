@@ -5,15 +5,12 @@
 \* ================================================================== */
 
 /* Body sections... */
-body {
-    max-width: @total-width*((((@gutter-width+@column-width)*4)-@gutter-width) / @gridsystem-width);
-}
 body > * {
     margin-bottom: @gutter-width*0.5px !important;
     margin-top: @gutter-width*0.5px !important;
 }
 header, main, footer {
-    .column(4);
+    .column(@columns);
 }
 /* ...Body sections */
 
@@ -131,39 +128,52 @@ footer ul.accordion li a {
 
 /* Media queries... */
 @media only screen and (min-width: @grid-breakpoint-medium) {
+    @columns: 8;
+    @gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+    .row(@columns:@columns) {
+        display: block;
+        width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+        margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
+        .clearfix;
+    }
+    .column(@x,@columns:@columns) {
+        display: inline;
+        float: left;
+        width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+        margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+    }
+
     .only-mobile {
         display: none !important;
     }
-    body {
-        max-width: @grid-breakpoint-medium;
-    }
     header, main, footer {
-        .column(8);
+        .column(@columns);
     }
-    header > div {
-        .row(8);
+    header .row {
+        .row(@columns);
     }
         header #logo {
-            .column(3, 8);
+            .column(3, @columns);
         }
             header #logo img {
                 height: auto;
             }
         header nav {
-            .column(5, 8);
+            .column(5, @columns);
             display: initial;
+            margin-bottom: 1em;
         }
-        header .inline-form {
-            .column(4);
+        header .row > .inline-form {
+            .column(@columns/2);
             display: flex;
             max-height: 550px;
             overflow-y: auto;
         }
-    footer > div {
-        .row(8);
+    footer .row {
+        .row(@columns);
     }
         footer ul {
-            .column(2, 8);
+            .column(@columns/4, @columns);
             padding: 0;
         }
         footer .accordion > *:first-child {
@@ -187,29 +197,50 @@ footer ul.accordion li a {
 }
 
 @media only screen and (min-width: @grid-breakpoint-large) {
+    @columns:                          12;
+    @gridsystem-width:                 (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+    @total-width:                      @gridsystem-width;
+    .row(@columns:@columns) {
+        display: block;
+        width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+        margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
+        .clearfix;
+    }
+    .column(@x,@columns:@columns) {
+        display: inline;
+        float: left;
+        width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+        margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+    }
+    .push(@offset:1) {
+        margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+    }
+    .pull(@offset:1) {
+        margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+    }
     body {
         max-width: @grid-breakpoint-large;
     }
     header, main, footer {
-        .column(12);
+        .column(@columns);
     }
-    header > div {
-        .row(12);
+    header .row {
+        .row(@columns);
     }
         header #logo {
-            .column(5, 12);
+            .column(5, @columns);
         }
         header nav {
-            .column(7, 12);
+            .column(7, @columns);
         }
         header nav a {
             .h2;
         }
-        header .inline-form:first-child {
+        header .row > .inline-form:first-of-type {
             .column(4);
             display: flex;
         }
-        header .inline-form:last-child {
+        header .row > .inline-form:last-of-type {
             .column(3);
             display: flex;
         }
@@ -217,12 +248,11 @@ footer ul.accordion li a {
         .column(8);
         .push(2);
     }
-    footer > div {
-        .row(12);
+    footer .row {
+        .row(@columns);
     }
         footer ul {
-            .column(3, 12);
-            padding: 0;
+            .column(@columns/4, @columns);
         }
 }
 /* ...Media queries */
