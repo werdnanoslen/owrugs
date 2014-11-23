@@ -3,7 +3,7 @@ $(function() {
     /* global... */
     $('.category-search-button').on('click', function(e) {
         e.preventDefault();
-        $('.category-search-box').slideToggle();
+        $(this).siblings('.category-search-box').slideToggle();
         return false;
     });
 
