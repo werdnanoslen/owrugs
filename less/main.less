@@ -36,7 +36,8 @@ nav li a {
     .h6;
     cursor: pointer;
     display: inline-block;
-    text-transform: lowercase !important;
+    margin-bottom: 0;
+    text-transform: lowercase;
 }
 nav hr {
     background-image: -webkit-linear-gradient(left, rgba(242,242,242,0.3), rgba(242,242,242,1), rgba(242,242,242,0.3));
@@ -46,6 +47,7 @@ nav hr {
     display: inline-block;
     height: 5px;
     margin: 0;
+    margin-top: 0.375rem;
     vertical-align: top;
     width: 100%;
 }
@@ -233,8 +235,8 @@ footer ul.accordion li a {
         header nav {
             .column(7, @columns);
         }
-        header nav a {
-            .h2;
+        header nav li a {
+            text-transform: uppercase;
         }
         header .row > .inline-form:first-of-type {
             .column(4);
