@@ -62,7 +62,17 @@ header .inline-form {
 }
 .category-search-box {
     display: none;
-    max-width: 100%;
+    position: relative;
+    width: 100%;
+}
+.category-search-box > div {
+    background: @white;
+    max-height: 550px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1;
+}
+.category-search-box table {
     table-layout: fixed;
 }
 .category-search-box td {
@@ -168,8 +178,6 @@ footer ul.accordion li a {
         header .row > .inline-form {
             .column(@columns/2);
             display: flex;
-            max-height: 550px;
-            overflow-y: auto;
         }
     footer .row {
         .row(@columns);
