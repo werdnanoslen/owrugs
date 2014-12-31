@@ -37,7 +37,7 @@ nav li a {
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
 nav hr {
     background-image: -webkit-linear-gradient(left, rgba(242,242,242,0.3), rgba(242,242,242,1), rgba(242,242,242,0.3));
@@ -211,7 +211,8 @@ footer ul.accordion li a {
         header nav {
             .column(5, @columns);
             display: initial;
-            margin-bottom: 1em;
+            margin: 15px 1.5625% 1em;
+      /*        margin-bottom: 1em; */
         }
         header .row > .inline-form {
             .column(@columns/2);
@@ -286,8 +287,8 @@ footer ul.accordion li a {
         }
         header nav {
             .column(7, @columns);
-            height: 2.6rem;
-            margin-top: 0.4rem;
+            height: 2.3rem;
+            margin-top: 1.0rem;
         }
         header nav li a {
             text-transform: uppercase;
